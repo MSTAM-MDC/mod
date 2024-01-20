@@ -38,3 +38,7 @@ if st.button('Moderate'):
     serialized_output = serialize(output)
     json_output = json.dumps(serialized_output, indent=2, ensure_ascii=False)
     st.json(json_output)
+
+tab1, tab2, tab3 = st.tabs(['About', 'Why', 'Contact'])
+with tab1:
+    st.write("AI hate speech detection involves the use of artificial intelligence to identify and classify instances of hate speech in various forms of communication, such as social media posts, comments, and private messages. Several AI models have been developed for this purpose, each with its unique approach. For example, researchers have developed models that utilize deep learning and neural networks to capture different properties of hate speech, as well as traditional rule-based approaches combined with deep learning to improve accuracy and explainability.")
