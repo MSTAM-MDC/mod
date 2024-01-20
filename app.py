@@ -1,4 +1,4 @@
-import streamlit as st
+timport streamlit as st
 from openai import OpenAI
 import json
 
@@ -28,9 +28,9 @@ api_key = st.secrets["openai_secret"]
 client = OpenAI(api_key=api_key)
 
 # Streamlit UI components
-st.title('''I love when it snows''')
+st.title('''Hate Speech Detection''')
 
-user_input = st.text_area("I hate people who hate cheerios! I want to hurt them!")
+user_input = st.text_area("Enter your text to run the hate speech detection.")
 
 if st.button('Moderate'):
     response = client.moderations.create(input=user_input)
