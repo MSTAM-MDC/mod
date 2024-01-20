@@ -28,9 +28,9 @@ api_key = st.secrets["openai_secret"]
 client = OpenAI(api_key=api_key)
 
 # Streamlit UI components
-st.title('''Dr. Ernesto Lee - CAI 2300C Introduction to Natural Language Processing at Miami Dade College - Kendall Campus - Hate Speech Detection''')
+st.title('''I love when it snows''')
 
-user_input = st.text_area("Enter text to moderate")
+user_input = st.text_area("I hate people who hate cheerios! I want to hurt them!")
 
 if st.button('Moderate'):
     response = client.moderations.create(input=user_input)
