@@ -30,7 +30,7 @@ client = OpenAI(api_key=api_key)
 # Streamlit UI components
 st.title('''Hate Speech Detection''')
 
-user_input = st.text_area("Enter your text to run the hate speech detection.")
+user_input = st.text_area("Enter your text to run the hate speech detection:")
 
 if st.button('Moderate'):
     response = client.moderations.create(input=user_input)
