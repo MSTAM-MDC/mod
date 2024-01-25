@@ -1,6 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 import json
+from PIL import Image
 
 # Function to serialize the output
 def serialize(obj):
@@ -26,6 +27,10 @@ api_key = st.secrets["openai_secret"]
 
 # Initialize the OpenAI client with the API key from secrets
 client = OpenAI(api_key=api_key)
+
+# Display GitHub logo
+image = Image.open('https://i.ibb.co/kyK4hJb/github.png')
+st.image(image, caption='GitHub Logo')
 
 # Streamlit UI components
 st.title('''Hate Speech Detection''')
