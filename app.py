@@ -1,7 +1,6 @@
 import streamlit as st
 from openai import OpenAI
 import json
-#from PIL import Image
 
 # Function to serialize the output
 def serialize(obj):
@@ -29,8 +28,6 @@ api_key = st.secrets["openai_secret"]
 client = OpenAI(api_key=api_key)
 
 # Display GitHub logo
-#image = Image.open('https://i.ibb.co/kyK4hJb/github.png')
-#st.image(image, caption='GitHub Logo')
 st.image("https://i.ibb.co/kyK4hJb/github.png")
 
 # Streamlit UI components
@@ -47,6 +44,7 @@ if st.button('Moderate'):
 
 tab1, tab2, tab3 = st.tabs(['About', 'Why', 'Contact'])
 with tab1:
+    st.video("https://streamable.com/tdr2no")
     st.write("AI hate speech detection involves the use of artificial intelligence to identify and classify instances of hate speech in various forms of communication, such as social media posts, comments, and private messages. Several AI models have been developed for this purpose, each with its unique approach. For example, researchers have developed models that utilize deep learning and neural networks to capture different properties of hate speech, as well as traditional rule-based approaches combined with deep learning to improve accuracy and explainability.")
 with tab2:
     st.write("AI hate speech detection is important for several reasons. Firstly, it can help identify and flag harmful content swiftly and accurately, enabling platforms to take proactive measures to combat online hate speech and create a safer digital environment. Additionally, automated detection is appealing for its ability to find hate speech much quicker and in vastly greater quantities than humans. Furthermore, the use of AI in hate speech detection can help mitigate the damaging impact of hate speech on social media, offering the potential for safer online interactions. Despite the current challenges and limitations, the ongoing development of AI-powered tools for hate speech detection remains a crucial area of research and innovation in the fight against online hate and harassment.")
