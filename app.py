@@ -41,6 +41,7 @@ if st.button('Moderate'):
     serialized_output = serialize(output)
     json_output = json.dumps(serialized_output, indent=2, ensure_ascii=False)
     st.json(json_output)
+    st.snow()
 
 tab1, tab2, tab3 = st.tabs(['About', 'Why', 'Contact'])
 with tab1:
