@@ -28,7 +28,7 @@ api_key = st.secrets["openai_secret"]
 client = OpenAI(api_key=api_key)
 
 # Display GitHub logo
-st.image("https://i.ibb.co/kyK4hJb/github.png")
+st.image("https://i.ibb.co/8zfW3PW/bannerspeech.png")
 
 # Streamlit UI components
 st.title('''Hate Speech Detection''')
